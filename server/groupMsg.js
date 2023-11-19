@@ -34,7 +34,6 @@ const groupMsg = (io) => {
       const groupUser = await GroupUserList.find()
         .where("userId")
         .in(socketId.split(","));
-      if (!privateRoom) return;
       groupUser.forEach((v) => {
         io.of("/group").to(v.socketId).emit("group-chat-req", {
           roomNumber: socketId,
@@ -98,7 +97,7 @@ async function createGroupUser(userId, socketId) {
   });
 }
 
-async function createMsgDocument(roomName, res) {
+async function createMsgDocument(roomNumber, res) {
   if (roomNumber === null) return;
 
   return await GroupMsg.create({
