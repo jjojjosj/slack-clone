@@ -10,10 +10,11 @@
 
 ### 몇 가지 책과 다르게 구현한 점
 
-1. Typescript로 작성
-2. useReducer대신에 Recoil 사용
-3. emotionjs 대신에 styled-components 사용
-4. Cloud mongodb 서버 대신에 자체 mongodb 서버 사용
+1. Client: Typescript로 작성
+2. Client: useReducer대신에 Recoil 사용
+3. Client: emotionjs 대신에 styled-components 사용
+4. Server: Cloud mongodb 서버 대신에 자체 mongodb 서버 사용
+5. Server: DB접속 url은 dotenv 활용
 
 ### .env에 필요한 사항(서버 사이드)
 
