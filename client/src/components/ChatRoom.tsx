@@ -216,7 +216,7 @@ export default function ChatRoom() {
 
   const onGroupSendHandler = (e: any) => {
     e.preventDefault();
-    if (userList.filter((v) => v.userId === groupUser).length > 0) {
+    if (userList.filter((v) => v.userId === groupUser).length <= 0) {
       alert("The user does not exist.");
       setGroupUser("");
       return;
