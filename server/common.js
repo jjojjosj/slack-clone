@@ -27,7 +27,7 @@ async function findOrCreateUser(userId, socketId) {
   if (userId === null) return;
 
   const document = await User.findOneAndUpdate(
-    { _id: socket.userId },
+    { _id: userId },
     { status: true }
   );
   if (document) return document;
