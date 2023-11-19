@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 import TextEditor from "./TextEditor";
 import GroupTextInput from "./GroupTextInput";
-import { IUserInfo, contextState } from "../atoms";
+import { contextState } from "../atoms";
 import { socketGroup, socketPrivate } from "../socket";
 import dayjs from "dayjs";
 import styled from "styled-components";
@@ -104,7 +104,7 @@ const ChatBoxGuide = styled.div`
 `;
 
 export default function ChatRoom() {
-  const [state, setState] = useRecoilState(contextState);
+  const state = useRecoilValue(contextState);
   const reactQuillRef = useRef<any>(null);
   const [text, setText] = useState("");
   const [groupUser, setGroupUser] = useState("");

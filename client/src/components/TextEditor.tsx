@@ -1,4 +1,4 @@
-import ReactQuill, { Quill } from "react-quill";
+import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { HiPaperAirplane } from "react-icons/hi2";
 import styled from "styled-components";
